@@ -1,0 +1,8 @@
+module "networking" {
+source = "./modules/networking"
+  region               = "${var.region}"
+  environment          = "${var.environment}"
+  vpc_cidr             = "${var.vpc_cidr}"
+  public_subnets_cidr  = "${var.public_subnets_cidr}"
+  availability_zones   = "${local.production_availability_zones}"
+}
